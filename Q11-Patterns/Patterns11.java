@@ -18,7 +18,10 @@ public class Patterns11 {
         //Print12(n);
         //Print13(n);
         //Print14(n);
-        Print15(n);
+        //Print15(n);
+        //Print16(n);
+        //Print17(n);
+        Print18(n); 
         sc.close();
     }
 
@@ -204,5 +207,51 @@ public class Patterns11 {
             System.out.println();
         }
     }
+
+    static void Print16(int n) {
+        char ch='A';
+        for(int i=0;i<n;i++) {
+            for(char j=0;j<=i;j++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+            ch++;
+        }
+    }
+
+    static void Print17(int n) {
+        for (int i = 0; i < n; i++) {
+            int mid = (2 * i + 1) / 2;
+            char ch = 'A';
+
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print(ch);
+                if (j < mid) {
+                    ch++;
+                } else {
+                    ch--;
+                }
+            }
+
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void Print18(int n) {
+    for (int i = 0; i < n; i++) {
+        char ch = (char) ('E' - i);
+        for (char j = ch; j <= 'E'; j++) {
+            System.out.print(j);
+        }
+        System.out.println();
+    }
+}
 }
 
