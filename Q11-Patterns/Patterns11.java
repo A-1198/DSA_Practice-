@@ -22,7 +22,10 @@ public class Patterns11 {
         //Print16(n);
         //Print17(n);
         //Print18(n); 
-        Print19(n);
+        //Print19(n);
+        //Print20(n);
+        //Print21(n);
+        Print22(n);
         sc.close();
     }
 
@@ -256,15 +259,65 @@ public class Patterns11 {
 }
 
     static void Print19(int n) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
+        int rows = 2 * n;
+        for (int i = 0; i < rows; i++) {
+            int d = Math.min(i, rows - 1 - i);
+            int side = n - d;
+            int spaces = 2 * d;
+
+            for (int j = 0; j < side; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < spaces; j++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < 2 * i + 1; j++) {
+            for (int j = 0; j < side; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
-}
 
+    static void Print20(int n) {
+        int rows = 2 * n - 1;
+        for (int i = 0; i < rows; i++) {
+            int stars = i < n ? i + 1 : 2 * n - i - 1;
+            int spaces = 2 * (n - stars);
+
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < spaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void Print21(int n) {
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                if(i==0 || i==n-1 || j==0 || j==n-1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void Print22(int n) {
+        for(int i=0;i<2*n-1;i++) {
+            for(int j=0;j<2*n-1;j++) {
+                int min=Math.min(Math.min(i,j),Math.min(2*n-2-i,2*n-2-j));
+                System.out.print(n-min);
+            }
+            System.out.println();
+        }
+    }
+
+}
