@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class BasicMaths12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,7 +9,7 @@ public class BasicMaths12 {
         isArmstrong(x);
         PrintAllDivisors(x);
         isPrime(x);
-        int y = sc.nextInt();
+        int y = sc.nextInt(); 
         HCF(x,y);
         sc.close();
     } 
