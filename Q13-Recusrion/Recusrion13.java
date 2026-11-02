@@ -12,7 +12,7 @@ public class Recusrion13 {
         printRec1(n,n);
         System.out.println();
         printRec2(1,n); 
-        sc.close();
+        sc.close();   
     }
 
     static void Print1(int n) {
@@ -50,15 +50,15 @@ public class Recusrion13 {
     static void printRec1(int i,int N) {
         if(i<=0) {
             return;
-        }
+        } 
         printRec1(i-1,N);
         System.out.print(i+" ");
     }
 
     static void printRec2(int i,int N) {
-        if(i>N) {
+        if(i>N) { 
             return;
-        }
+        } 
         printRec2(i+1,N);
         System.out.print(i+" ");
     }
