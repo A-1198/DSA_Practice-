@@ -1,5 +1,5 @@
-10
-24
-Reversed Array: 5 4 3 2 1 
-true
-3
+Highest Frequency: 1->2
+Lowest Frequency: 3-> 1
+2
+2
+1
